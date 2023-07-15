@@ -121,7 +121,7 @@ jobs:
     - name: Copy 📂
       run: |
         mkdir $RUNNER_USERDIR/output
-        cp -r obj-aarch64-pc-mingw32/dist/floorp $RUNNER_USERDIR/output/
+        cp -r obj-aarch64-pc-windows-msvc/dist/floorp $RUNNER_USERDIR/output/
 
     - name: Publish 🎁
       uses: actions/upload-artifact@master
