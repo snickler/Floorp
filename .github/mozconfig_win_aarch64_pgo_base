@@ -28,7 +28,7 @@ export MIDL="$RUNNER_USERDIR/win-cross/wine/bin/widl"
 export WINE="$RUNNER_USERDIR/win-cross/wine/bin/wine64"
 export WINEDEBUG=-all
 
-ac_add_options --target=aarch64
+ac_add_options --target=aarch64-pc-mingw32
 
 export MOZ_STUB_INSTALLER=1
 
