@@ -1629,6 +1629,7 @@ def midl_flags(flags, target, midl):
     return flags + {
         "x86": ["--win32", "-m32"],
         "x86_64": ["--win64", "-m64"],
+        "aarch64": ["--win64", "-m64"],
     }[target.cpu]
 
 

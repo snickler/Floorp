@@ -80,7 +80,8 @@ jobs:
       run: |
         mkdir -p $RUNNER_USERDIR/win-cross
 
-        cp ./.github/mozconfig_win_pgo_base mozconfig
+        cp ./.github/mozconfig_win_aarch64_pgo_base mozconfig
+
         echo 'ac_add_options --with-branding=browser/branding/official' >> mozconfig
         echo 'ac_add_options --enable-profile-generate=cross' >> mozconfig
         sudo apt update
@@ -121,7 +122,7 @@ jobs:
     - name: Copy 📂
       run: |
         mkdir $RUNNER_USERDIR/output
-        cp -r obj-aarch64-pc-mingw32/dist/floorp $RUNNER_USERDIR/output/
+        cp -r obj-aarch64-pc-windows-msvc/dist/floorp $RUNNER_USERDIR/output/
 
     - name: Publish 🎁
       uses: actions/upload-artifact@master
