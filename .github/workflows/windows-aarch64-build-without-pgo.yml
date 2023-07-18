@@ -126,9 +126,9 @@ jobs:
     - name: Copy 📂
       run: |
         mkdir $RUNNER_USERDIR/output
-        cp obj-aarch64-pc-mingw32/dist/install/sea/floorp-*.en-US.win64.installer-stub.exe $RUNNER_USERDIR/output/
-        cp obj-aarch64-pc-mingw32/dist/install/sea/floorp-*.en-US.win64.installer.exe $RUNNER_USERDIR/output/
-        cp obj-aarch64-pc-mingw32/dist/floorp-*.en-US.win64.zip $RUNNER_USERDIR/output/
+        cp obj-aarch64-pc-windows-msvc/dist/install/sea/floorp-*.en-US.win64-aarch64.installer-stub.exe $RUNNER_USERDIR/output/
+        cp obj-aarch64-pc-windows-msvc/dist/install/sea/floorp-*.en-US.win64-aarch64.installer.exe $RUNNER_USERDIR/output/
+        cp obj-aarch64-pc-windows-msvc/dist/floorp-*.en-US.win64-aarch64.zip $RUNNER_USERDIR/output/
 
     - name: Publish 🎁
       uses: actions/upload-artifact@master
